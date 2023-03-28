@@ -20,11 +20,11 @@ int get_flags(const char *format, int *i)
 		for (j = 0; FLAGS_CH[j] != '\0'; j++)
 			if (format[curr_i] == FLAGS_CH[j])
 			{
-<<<<<<< HEAD
-				flags |= FLAGS_ARR[j];
-=======
+
 				flags |= FLAGS_ARG[j];
->>>>>>> f94695619f538231f6b83744c354c293a50b1bc7
+
+				flags |= FLAGS_ARG[j];
+
 				break;
 			}
 
