@@ -7,20 +7,20 @@
  *
  * Return: Precision.
  */
-int get_size(const char *format, int *a)
+int get_size(const char *format, int *i)
 {
-	int curr_a = *a + 1;
+	int curr_i = *i + 1;
 	int size = 0;
 
-	if (format[curr_a] == 'l')
+	if (format[curr_i] == 'l')
 		size = S_LONG;
-	else if (format[curr_a] == 'h')
+	else if (format[curr_i] == 'h')
 		size = S_SHORT;
 
 	if (size == 0)
-		*a = curr_a - 1;
+		*i = curr_i - 1;
 	else
-		*a = curr_a;
+		*i = curr_i;
 
 	return (size);
 }
